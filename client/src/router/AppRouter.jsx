@@ -1,4 +1,4 @@
-import { Routes, Route,} from "react-router-dom";
+import { Routes, Route, } from "react-router-dom";
 // pages
 import NotFound from "pages/NotFound";
 // dashboard main / layout
@@ -35,9 +35,9 @@ const AppRouter = () => {
       <Route path="/" exact element={<Dashboard />}>
         {/*========== main page ============ */}
         <Route path="/" element={<Welcome />}>
-        <Route index exact element={<AzuraTools />} />
-        <Route path="azura-tools" exact element={<AzuraTools />} />
-        <Route path="my-watchlist" exact element={<MyWatchList />} />
+          <Route index exact element={<AzuraTools />} />
+          <Route path="azura-tools" exact element={<AzuraTools />} />
+          <Route path="my-watchlist" exact element={<MyWatchList />} />
         </Route>
         {/*========== collection tracker routes ==============*/}
         <Route path="collection-tracker" exact element={<CollectionTracker />}>

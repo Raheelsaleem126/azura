@@ -1,6 +1,12 @@
 import { Fade } from "react-awesome-reveal";
+import axios from 'axios';
+import { Navigate } from "react-router-dom";
 
-const LoginComponent = ({ loginToAccount }) => {
+const LoginComponent = () => {
+  const handleLogin = async () => {
+    // Request for login
+    window.location.href = 'http://localhost:3001/auth';
+  }
   return (
     <div className="welcome-box-main d-flex flex-col j-c-c a-i-c">
       <Fade direction="up" triggerOnce duration={950}>
@@ -13,8 +19,9 @@ const LoginComponent = ({ loginToAccount }) => {
           </Fade>
           <Fade direction="up" triggerOnce duration={1000} delay={960}>
             <button
-              onClick={() => loginToAccount()}
+              onClick={handleLogin}
               className="btn btn-primary mx-auto"
+
             >
               Login
             </button>
